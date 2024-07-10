@@ -1,0 +1,43 @@
+@mixin flexCenter($display, $justify, $align, $direction) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin fontProperties($fontWeight, $fontSize, $lineHeight) {
+    line-height: $lineHeight;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+
+// Home
+
+.wrapperHome {
+    @include flexCenter(flex, center, center, column);
+    padding: 80px;
+    width: 100%;
+}
+
+.wrapperZagolovki {
+    @include flexCenter(flex, center, center, column);
+    gap: 20px;
+    margin-bottom: 50px;
+    h1 {
+        @include fontProperties(300, 60px, 70px);
+    }
+    h2 {
+        @include fontProperties(300, 40px, 60px);
+    }
+}
+
+.listOfCategory {
+    @include flexCenter(flex, center, center, column);
+    gap: 20px;
+    list-style: none;
+}
+
+.listItem {
+    @include fontProperties(500, 25px, 30px);
+}

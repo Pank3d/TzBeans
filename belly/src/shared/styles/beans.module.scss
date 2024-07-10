@@ -1,0 +1,80 @@
+@mixin flexCenter($display, $justify, $align, $direction) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin fontProperties($fontWeight, $fontSize, $lineHeight) {
+    line-height: $lineHeight;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+
+
+//Beanslist
+
+
+.radioInputContainer{
+    @include flexCenter(flex, start, start, row);
+    gap: 10px;
+}
+
+.searchContainer{
+    @include flexCenter(flex, start,start, column);
+    margin-top: 20px;
+    
+}
+.searchPStyle{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.beansCardsWrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap:40px;
+    column-gap:60px;
+}
+
+
+.beansWrapper {
+    padding: 80px;
+    @include flexCenter(flex, center, center, column);
+    h1 {
+        @include fontProperties(300, 60px, 70px);
+    }
+}
+
+//BeansCard
+
+.beansCard{
+    @include flexCenter(flex, center, center, column);
+}
+
+.beansCardImg {
+    height: 150px;
+    width: 150px;
+}
+
+.beansCardTitle {
+}
+
+.beansCardDescription {
+}
+
+// checkBox
+.checkboxWrapperMain{
+    margin-left: 20px;
+    @include flexCenter(flex, center,center, row);
+    gap: 10px;
+}
+
+.checkboxWrapper{
+    @include flexCenter(flex, center,center, row);
+    text-align: center;
+    height: 36px;
+    gap: 10px;
+
+}
