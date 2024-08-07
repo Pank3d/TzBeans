@@ -1,6 +1,8 @@
+import { error, options, success } from "../shared/getPosition/getPosition";
 import style from "../shared/styles/home.module.scss"
 import { Link } from 'react-router-dom'
 const Home = () => {
+    navigator.geolocation.getCurrentPosition(success, error, options);
     return (
         <section className={style.wrapperHome}>
             <div className={style.wrapperZagolovki}>

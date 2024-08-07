@@ -1,8 +1,12 @@
 import BeansList from "../entities/beans/ui/BeansList"
+
 import style from "../shared/styles/beans.module.scss"
 
 
 const BeansPage = () => {
+ 
+  
+
   
   return (
     <section className={style.beansWrapper}>

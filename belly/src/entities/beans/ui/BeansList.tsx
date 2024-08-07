@@ -25,6 +25,8 @@ const BeansList = () => {
         }
     })
 
+   
+
     useEffect(() => {
         refetch()
     }, [searchParams])
